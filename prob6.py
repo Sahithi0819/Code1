@@ -1,11 +1,9 @@
-number_x=list(input("Enter the list:"))
-print(number_x)
-length_list= len(number_x)
-print(length_list)
-if(number_x[0] == number_x[length_list-1]):
-    print("Result is True")
-else:
-    print("Result is False")
+#Exercise 6: Display numbers divisible by 5
+
+n_list=[10, 20, 33, 46, 55]
+for i in n_list:
+    if i%5==0:
+        print(i)
 
 
 

@@ -1,27 +1,35 @@
-str_x = "Emma is good developer. Emma is a writer"
-lis1 = []
-word = " "
+#Exercise 7: Find the number of occurrences of a substring in a string
+
+str_x = "Emma is good sunny developer. sunny Emma is sunny a writer"
+word=""
+word_list=[]
 for i in str_x:
-    if i != " ":
-        word = word+i
+    if i not in (" ","."):
+        word+=i
     if i == " ":
-        lis1.append(word)
-        word = " "
-lis1.append(word)
-# print(lis1)
+        word_list.append(word.lower())
+        word=""
 
-unique_value=[]
-for i in lis1:
-    if i not in unique_value:
-        unique_value.append(i)
-print(unique_value)
+if word:
+    word_list.append(word.lower())
+print(word_list)
 
-counts=[]
-for i in unique_value:
-    count=0
-    for j in lis1:
-        if i == j:
-            count=count+1
-    counts.append(count)
-    # print(i,count)
-print(counts)
+count={}
+for i in word_list:
+    if i in count:
+        count[i]+=1
+    if i not in count:
+        count[i]=1
+print(count)
+
+max_list=[]
+for i in count:
+    max_list.append(count[i])
+max_list=sorted(max_list,reverse=True)
+print(max_list)
+for i in max_list:
+   for j,val in count.items():
+       if i == val:
+           print(j,i)
+           max_list.remove(i)
+

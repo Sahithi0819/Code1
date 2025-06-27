@@ -1,3 +1,5 @@
+#Exercise 2: Print the Sum of a Current Number and a Previous number
+
 a=int(input("enter the number:"))
 print("Printing current and previous number sum in a range",a)
 
