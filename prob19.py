@@ -1,3 +1,5 @@
+#Exercise: 19: Print Alternate Prime Numbers till 20
+
 list_1=[]
 for i in range(2,20):
     for j in range(2,i):

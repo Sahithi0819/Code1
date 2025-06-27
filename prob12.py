@@ -1,3 +1,5 @@
+#Exercise 12: Calculate income tax
+
 income=45000
 ori=income
 if ori>10000:

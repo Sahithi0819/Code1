@@ -1,7 +1,17 @@
+#Exercise 22: Capitalize the first letter of each word in a string
+
 str1 = "pynative.com is for python lovers"
-c = str1.split()
-result = ""
-for i in c:
-    ca = i.capitalize()
-    result = result + ca + " "
-print(result.strip())
+wrd=""
+lis=[]
+for i in str1:
+    if i not in " ":
+        wrd+=i
+    if i ==" ":
+        lis.append(wrd)
+        wrd=""
+lis.append(wrd)
+
+for i in lis:
+    print(i.capitalize(),end=" ")
+
+
