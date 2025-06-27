@@ -1,3 +1,5 @@
+#Exercise 11: Percentage Display
+
 num=float(input())
 den=float(input())
 if den<=0:
